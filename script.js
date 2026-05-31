@@ -230,3 +230,28 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(autoScroll, 500);
     }
 });
+
+// Navbar scroll background and collapse effect
+let lastScrollY = window.scrollY;
+document.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const currentScrollY = window.scrollY;
+        
+        // Background and shrink effect
+        if (currentScrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Hide on scroll down, show on scroll up
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.classList.add('nav-hidden');
+        } else {
+            navbar.classList.remove('nav-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+    }
+});
