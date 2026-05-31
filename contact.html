@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kairchives</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="font-size: 2.8rem;">Kairchives</a>
+    </nav>
+
+    <main class="contact-page-main">
+        <div class="contact-container">
+            <div class="contact-left">
+                <h1 class="contact-title">Let’s Collaborate and make something Creative!</h1>
+                
+                <div class="contact-stats">
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Layouts Designed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Commissioned Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Creative Availability</p>
+                    </div>
+                </div>
+
+                <div class="contact-testimonial">
+                    <div class="testimonial-header">
+                        <div>
+                            <h4>Kairchives' Approach</h4>
+                            <span>Design meets Functionality</span>
+                        </div>
+                
+                    </div>
+                    <p>Every pixel matters. I focus on creating intuitive, user-friendly, and visually striking digital experiences. Whether it is a web application or a brand's publication material, I ensure the final product perfectly aligns with your goals.</p>
+                </div>
+            </div>
+
+            <div class="contact-right"> <!-- This div contains the contact form -->
+                <div class="form-header">
+                    <a href="mailto:castilloji@students.nu-moa.edu.ph" class="book-call-link">Prefer to book a call ?</a>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');"> <!-- This form handles the contact submission -->
+                    <!--event.preventDefault(); means prevent the default form submission behavior -->
+                    <div class="form-group">
+                        <label>NAME</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>EMAIL</label>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>WEBSITE (optional)</label>
+                        <input type="text" placeholder="Company Website">
+                    </div>
+                    <div class="form-group">
+                        <label>BUDGET</label>
+                        <select required>
+                            <option value="">Select Budget...</option>
+                            <option value="0">500 - 1000 Pesos</option>
+                            <option value="1">1500 - 2000 Pesos </option>
+                            <option value="2">2,500 - 3,000 Pesos</option>
+                            <option value="3">3,000+ Pesos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>MESSAGE</label>
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p class="form-note">(Will reach out to you within 24hrs)</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="services-pricing">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Web Design (UI and UX)</h3>
+                    <span class="price">Starting from 500 pesos</span>
+                </div>
+                <p>A unique and effective web design that will make your branding stand out.</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Mobile and Web Application Development</h3>
+                    <span class="price">Starting from 1,000 - 3,000 Pesos</span>
+                </div>
+                <p>Developing innovative mobile and web applications that deliver exceptional user experiences.</p>
+            </div>
+        </div>
+
+        <div class="banner-text">
+            <h2>Lets 
+                <span class="sliding-words-container"> <!-- This container holds the sliding words -->
+                    <span class="sliding-words">
+                        <span class="highlight">design</span>
+                        <span class="highlight">build</span>
+                        <span class="highlight">create</span>
+                        <span class="highlight">design</span> <!-- Repeating the first word to create a loop -->
+                    </span>
+                </span> incredible website together.
+            </h2>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <div class="big-text-container">
+            <h1 class="massive-text">KAI'S PORTFOLIO</h1>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Johannah Castillo</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

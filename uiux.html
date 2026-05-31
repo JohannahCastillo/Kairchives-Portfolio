@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Designs | Johannah Castillo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="uiux.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="uiux-page">
+
+    <div class="page-background" style="background-image: url('schoolprojects/schoolprojectsbg.png');"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Kairchives</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+            <li><a href="index.html#projects">Other Projects</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-hero">
+        <h1 class="unique-title">UI/UX Designs</h1>
+    </header>
+
+    <section class="gallery-section">
+        <div class="project-showcase">
+            
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="projects/commisionsbg.png" alt="UI Design 1">
+                </div>
+                <div class="showcase-info">
+                    <h3>Commission Hub</h3>
+                    <p>A streamlined interface designed to connect creators and clients, optimizing the user flow for requesting custom artworks.</p>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="schoolprojects/schoolprojectsbg.png" alt="UI Design 2">
+                </div>
+                <div class="showcase-info">
+                    <h3>Academic Portal Redesign</h3>
+                    <p>A modern and intuitive UX update for a university student portal to improve accessibility of grades, schedules, and announcements.</p>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="projects/f1_layout.png" alt="UI Design 3">
+                </div>
+                <div class="showcase-info">
+                    <h3>F1 Data Dashboard</h3>
+                    <p>A high-performance dashboard UI displaying real-time telemetry, driver standings, and race analytics.</p>
+                </div>
+            </div>
+
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="projects/spotify.png" alt="UI Design 4">
+                </div>
+                <div class="showcase-info">
+                    <h3>Music Player App Concept</h3>
+                    <p>A conceptual mobile application design focusing on dark mode aesthetics, smooth playback interactions, and personalized playlists.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="view-more-section">
+        <a href="https://www.behance.net/johannacastill7" target="_blank" class="btn-view-more">
+            View More on Behance
+        </a>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <span class="prev-lightbox">&#10094;</span>
+        <span class="next-lightbox">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-cta">
+                <h2>Ready to elevate your brand?</h2>
+                <p>Whether you need a sleek, high-converting website or standout publication designs, I'm here to bring your vision to life. Let's collaborate and build something extraordinary together.</p>
+                <a href="contact.html" class="btn-outline" role="button">Start a Project</a>
+            </div>
+            <div class="footer-design-element">
+                <div class="rotating-badge">
+                    <svg viewBox="0 0 100 100" width="140" height="140">
+                        <defs>
+                            <path id="circlePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                        </defs>
+                        <text fill="#000000" font-size="9" font-weight="600">
+                            <textPath href="#circlePath" textLength="251.4" lengthAdjust="spacing">
+                            CREATIVE DESIGN & PUBLICATION • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="center-star">✦</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="big-text-container">
+                <h1 class="massive-text">KAI'S PORTFOLIO</h1>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; 2026 Johannah Castillo. All rights reserved.</p>
+                <p>Designed with creativity & passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Back to Top">&#8593;</button>
+
+    <script src="uiux.js"></script>
+</body>
+</html>
