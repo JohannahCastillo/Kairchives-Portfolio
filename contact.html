@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for checkmark icon -->
 </head>
 <body>
     
@@ -50,34 +51,40 @@
                 <div class="form-header">
                     <a href="mailto:castilloji@students.nu-moa.edu.ph" class="book-call-link">Prefer to book a call ?</a>
                 </div>
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');"> <!-- This form handles the contact submission -->
-                    <!--event.preventDefault(); means prevent the default form submission behavior -->
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST"> <!-- This form handles the contact submission -->
+                    <!-- Replace YOUR_ACCESS_KEY_HERE with the key sent to your email -->
+                    <input type="hidden" name="access_key" value="892e349f-5c67-4003-bf4c-efc51a5ad8af">
+                    
+                    <!-- Optional: Customizes how the email looks when it arrives in your inbox -->
+                    <input type="hidden" name="subject" value="New Portfolio Inquiry!">
+                    <input type="hidden" name="from_name" value="Kairchives Website">
+
                     <div class="form-group">
                         <label>NAME</label>
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label>EMAIL</label>
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <label>WEBSITE (optional)</label>
-                        <input type="text" placeholder="Company Website">
+                        <input type="text" name="website" placeholder="Company Website">
                     </div>
                     <div class="form-group">
                         <label>BUDGET</label>
-                        <select required>
+                        <select name="budget" required>
                             <option value="">Select Budget...</option>
-                            <option value="0">500 - 1000 Pesos</option>
-                            <option value="1">1500 - 2000 Pesos </option>
-                            <option value="2">2,500 - 3,000 Pesos</option>
-                            <option value="3">3,000+ Pesos</option>
+                            <option value="500 - 1000 Pesos">500 - 1000 Pesos</option>
+                            <option value="1500 - 2000 Pesos">1500 - 2000 Pesos </option>
+                            <option value="2,500 - 3,000 Pesos">2,500 - 3,000 Pesos</option>
+                            <option value="3,000+ Pesos">3,000+ Pesos</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label>MESSAGE</label>
-                        <textarea placeholder="Your Message" required></textarea>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Send Message</button>
                     <p class="form-note">(Will reach out to you within 24hrs)</p>
@@ -124,6 +131,32 @@
             <p>© 2026 Johannah Castillo</p>
         </div>
     </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="project-modal">
+        <div class="project-modal-content" style="max-width: 450px; text-align: center; padding: 50px 30px; margin: 0 auto;">
+            <span class="close-project-modal" id="close-success-modal">&times;</span>
+            <div style="font-size: 4.5rem; color: #00cc66; margin-bottom: 20px;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 15px; color: #fff;">Message Sent!</h2>
+            <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Thank you for reaching out.<br>I will get back to you within 24 hours.</p>
+            <button id="close-success-btn" class="btn-glass" style="margin-top: 35px; padding: 12px 35px; font-size: 1.1rem; background-color: #ffffff; color: #000000;">Awesome</button>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="project-modal">
+        <div class="project-modal-content" style="max-width: 450px; text-align: center; padding: 50px 30px; margin: 0 auto;">
+            <span class="close-project-modal" id="close-error-modal">&times;</span>
+            <div style="font-size: 4.5rem; color: #ff4444; margin-bottom: 20px;">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 15px; color: #fff;">Oops!</h2>
+            <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Something went wrong while sending.<br>Please try again later.</p>
+            <button id="close-error-btn" class="btn-glass" style="margin-top: 35px; padding: 12px 35px; font-size: 1.1rem; background-color: #ffffff; color: #000000;">Close</button>
+        </div>
+    </div>
 
     <script src="contact.js"></script>
 </body>
